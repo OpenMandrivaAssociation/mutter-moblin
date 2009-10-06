@@ -8,17 +8,17 @@ Release: %mkrel 1
 Source0: http://git.moblin.org/cgit.cgi/mutter-moblin/snapshot/mutter-moblin-%{version}.tar.bz2
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
-BuildRequires: libstartup-notification-1-devel
+BuildRequires: startup-notification-devel
 BuildRequires: libmesagl-devel
 BuildRequires: mutter-devel
 BuildRequires: libgnome-menu-devel
-BuildRequires: libnbtk-devel
-BuildRequires: libjana-devel
+BuildRequires: nbtk-devel
+BuildRequires: jana-devel
 BuildRequires: mojito-devel
-BuildRequires: moblin-clutter-mozembed-devel
-BuildRequires: libbickley-devel
-BuildRequires: libbognor-regis-devel
-BuildRequires: libanerley-devel
+BuildRequires: clutter-mozembed-devel
+BuildRequires: bickley-devel
+BuildRequires: bognor-regis-devel
+BuildRequires: anerley-devel
 
 BuildRequires: intltool
 
