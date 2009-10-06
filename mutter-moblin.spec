@@ -1,10 +1,15 @@
+%define panel_name	moblin-panel
+%define panel_major	0
+%define panel_libname	%mklibname %{panel_name} %{panel_major}
+%define panel_develname	%mklibname %{panel_name} -d
+
 Name: mutter-moblin
 Summary: Moblin Netbook plugin for Metacity Clutter, aka, Mutter
 Group: Graphical desktop/Other 
 Version: 0.40.3
 License: GPLv2
 URL: http://www.moblin.org
-Release: %mkrel 3
+Release: %mkrel 4
 Source0: http://git.moblin.org/cgit.cgi/mutter-moblin/snapshot/mutter-moblin-%{version}.tar.bz2
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
@@ -24,16 +29,26 @@ BuildRequires: intltool
 
 Requires: gnome-menus
 Requires: moblin-mutter
+Requires: %{panel_libname} = %{version}-%{release}
 
 %description
 Moblin Netbook plugin for Metacity Clutter, aka, Mutter
 
-%package devel
-Summary: Development files for Moblin's Mutter
+%package -n %{panel_libname}
+Summary: Moblin panel libraries
 Group: System/Libraries
 
-%description devel
-Development files for Moblin's Mutter
+%description -n %{panel_libname}
+Moblin panel libraries
+
+%package -n %{panel_develname}
+Summary: Development libraries and headers for %{panel_name}
+Group: Development/C
+Requires: %{panel_libname} = %{version}-%{release}
+Provides: %{panel_name}-devel
+
+%description -n %{panel_develname}
+Development environment for %{panel_name}
 
 %prep
 %setup -q
@@ -66,7 +81,14 @@ rm -rf %{buildroot}
 %{_datadir}/mutter-moblin/*
 %{_datadir}/locale/*
 
-%files devel
-%{_includedir}/libmoblin-panel/*
-%{_libdir}/libmoblin-panel.*
-%{_libdir}/pkgconfig/*.pc
+%files -n %{panel_libname}
+%defattr(-,root,root,-)
+%{_libdir}/lib%{panel_name}.so.%{panel_major}*
+
+%files -n %{panel_develname}
+%defattr(-,root,root,-)
+%dir %{_includedir}/lib%{panel_name}
+%{_includedir}/lib%{panel_name}/*
+%{_libdir}/lib%{panel_name}.la
+%{_libdir}/lib%{panel_name}.so
+%{_libdir}/pkgconfig/%{panel_name}.pc
