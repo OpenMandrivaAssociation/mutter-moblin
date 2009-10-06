@@ -1,4 +1,4 @@
-Name: moblin-mutter
+Name: mutter-moblin
 Summary: Moblin Netbook plugin for Metacity Clutter, aka, Mutter
 Group: User Interface/Desktops
 Version: 0.40.3
