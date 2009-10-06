@@ -56,10 +56,6 @@ done
 %clean
 rm -rf %{buildroot}
 
-%post -p /sbin/ldconfig
-
-%postun -p /sbin/ldconfig
-
 %files -f mutter-moblin.lang
 %defattr(-,root,root,-)
 %doc COPYING
