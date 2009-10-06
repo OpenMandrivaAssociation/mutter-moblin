@@ -4,13 +4,13 @@ Group: Graphical desktop/Other
 Version: 0.40.3
 License: GPLv2
 URL: http://www.moblin.org
-Release: %mkrel 2
+Release: %mkrel 3
 Source0: http://git.moblin.org/cgit.cgi/mutter-moblin/snapshot/mutter-moblin-%{version}.tar.bz2
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 BuildRequires: startup-notification-devel
 BuildRequires: libmesagl-devel
-BuildRequires: mutter-devel
+BuildRequires: moblin-mutter-devel
 BuildRequires: libgnome-menu-devel
 BuildRequires: nbtk-devel
 BuildRequires: jana-devel
