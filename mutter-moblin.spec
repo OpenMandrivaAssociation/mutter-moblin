@@ -23,7 +23,7 @@ BuildRequires: anerley-devel
 BuildRequires: intltool
 
 Requires: gnome-menus
-Requires: mutter
+Requires: moblin-mutter
 
 %description
 Moblin Netbook plugin for Metacity Clutter, aka, Mutter
