@@ -4,7 +4,7 @@ Group: User Interface/Desktops
 Version: 0.40.3
 License: GPLv2
 URL: http://www.moblin.org
-Release: %mkrel 2
+Release: %mkrel 1
 Source0: http://git.moblin.org/cgit.cgi/mutter-moblin/snapshot/mutter-moblin-%{version}.tar.bz2
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
@@ -24,10 +24,16 @@ BuildRequires: intltool
 
 Requires: gnome-menus
 Requires: mutter
-Requires: gnome-menus
 
 %description
 Moblin Netbook plugin for Metacity Clutter, aka, Mutter
+
+%package devel
+Summary: Development files for Moblin's Mutter
+Group: System/Libraries
+
+%description devel
+Development files for Moblin's Mutter
 
 %prep
 %setup -q
@@ -55,6 +61,12 @@ rm -rf %{buildroot}
 
 %files -f %{name}.lang
 %defattr(-,root,root,-)
-%doc COPYING
-%{_libdir}/metacity/plugins/clutter/*
+%doc COPYING NEWS AUTHORS README ChangeLog
+%{_libdir}/mutter/plugins/*
 %{_datadir}/mutter-moblin/*
+%{_datadir}/locale/*
+
+%files devel
+%{_includedir}/libmoblin-panel/*
+%{_libdir}/libmoblin-panel.*
+%{_libdir}/pkgconfig/*.pc
