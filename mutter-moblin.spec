@@ -22,9 +22,7 @@ BuildRequires: libanerley-devel
 
 BuildRequires: intltool
 
-Requires: libnbtk0
 Requires: gnome-menus
-Requires: libstartup-notification-1_0
 Requires: mutter
 Requires: gnome-menus
 
