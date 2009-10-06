@@ -34,7 +34,7 @@ Moblin Netbook plugin for Metacity Clutter, aka, Mutter
 
 %build
 autoreconf
-%configure --enable-netpanel --enable-ahoghill --enable-people --enable-debug --disable-static
+%configure --disable-static
 %make
 
 %install
