@@ -32,7 +32,7 @@ Requires: gnome-menus
 Moblin Netbook plugin for Metacity Clutter, aka, Mutter
 
 %prep
-%setup -q -n %{name}-%{version}
+%setup -q
 
 %build
 autoreconf
