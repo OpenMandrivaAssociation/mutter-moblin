@@ -38,11 +38,11 @@ Moblin Netbook plugin for Metacity Clutter, aka, Mutter
 autoreconf
 %configure --enable-netpanel --enable-ahoghill --enable-people --enable-debug --disable-static
 export LD_AS_NEEDED=1
-make %{?_smp_mflags}
+%make
 
 %install
 rm -rf %{buildroot}
-make install DESTDIR=$RPM_BUILD_ROOT INSTALL="%{__install} -p"
+%makeinstall_std
 
 %find_lang mutter-moblin  || echo -n >> mutter-moblin.lang
 
