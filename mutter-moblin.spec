@@ -25,6 +25,7 @@ BuildRequires: bickley-devel
 BuildRequires: bognor-regis-devel
 BuildRequires: anerley-devel
 BuildRequires: gnome-common
+BuildRequires: gtk-doc
 BuildRequires: intltool
 
 Requires: gnome-menus
