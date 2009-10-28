@@ -24,7 +24,7 @@ BuildRequires: clutter-mozembed-devel
 BuildRequires: bickley-devel
 BuildRequires: bognor-regis-devel
 BuildRequires: anerley-devel
-
+BuildRequires: gnome-common
 BuildRequires: intltool
 
 Requires: gnome-menus
