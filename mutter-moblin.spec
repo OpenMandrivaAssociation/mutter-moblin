@@ -6,7 +6,7 @@
 Name: mutter-moblin
 Summary: Moblin Netbook plugin for Metacity Clutter, aka, Mutter
 Group: Graphical desktop/Other 
-Version: 0.40.3
+Version: 0.43.2
 License: GPLv2
 URL: http://www.moblin.org
 Release: %mkrel 4
@@ -54,8 +54,8 @@ Development environment for %{panel_name}
 %setup -q
 
 %build
-autoreconf
-%configure --disable-static
+NOCONFIGURE=nil ./autogen.sh
+%configure2_5x --disable-static
 %make
 
 %install
