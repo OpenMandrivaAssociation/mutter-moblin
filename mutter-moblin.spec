@@ -13,6 +13,11 @@ Release: %mkrel 5
 Source0: http://git.moblin.org/cgit.cgi/mutter-moblin/snapshot/mutter-moblin-%{version}.tar.bz2
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires: startup-notification-devel
 BuildRequires: libmesagl-devel
 BuildRequires: moblin-mutter-devel
